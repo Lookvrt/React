@@ -1,0 +1,54 @@
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.agregar{
+  display: flex;
+  place-items: center;
+  justify-content: space-around;
+}
+
+.boton {
+  text-decoration: none;
+  background-color: #1d50dd;
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.8rem;
+}
+
+.tabla {
+  margin: 0 auto; 
+  border-radius: 8px; 
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.tabla th,
+.tabla td {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.tabla tr:hover {
+  background-color: #f9f9f9;
+}
+
+.badge.ok{
+  background-color: #018601;
+  color: white;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.badge.pend{
+  background-color: #ffff00;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+}

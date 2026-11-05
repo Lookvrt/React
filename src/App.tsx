@@ -1,86 +1,29 @@
-import Saludo from './Saludo';
+import { Routes, Route, Link, Navigate  } from 'react-router-dom';
+import Lista from './Lista/Lista';
+import Agregar from './Agregar/Agregar';
+import Modificar from './Modificar/Modificar';  
 import './App.css';
-
+// Componente raíz: barra de navegación + área de rutas.
 function App() {
-  const titulo: String = "Semana 11";
-  const curso: String = 'JS Avanzado';
   return (
     <div>
-      <h1>{titulo}, {curso}</h1>
-      <Saludo />
-      <div className='list'>
-        <Lista />
+      <nav className="navbar">
+        <span className="marca">Mini-LMS</span>
+        <div className='nav'>
+          <Link className="nav-btn" to="/">Lista</Link>
+          <Link className="nav-btn" to="/agregar">Agregar</Link>
+          <Link className="nav-btn" to="/modificar">Modificar</Link>
+        </div>
+      </nav>
+      <div className="contenedor">
+        <Routes>
+          <Route path="/" element={<Lista/>} />
+          <Route path="/agregar" element={<Agregar />} />
+          <Route path="/modificar" element={<Modificar />} />
+          <Route path="" element={<Navigate to="/" replace />} />
+        </Routes>
       </div>
     </div>
   );
 }
-
-// La forma de los datos del Mini-LMS (tipos de TypeScript en TSX).
-interface Estudiante {
-  nombre: string;
-  creditos: number;
-}
-
-function estado(creditos: number): string {
-  if (creditos < 1 || creditos > 24) {
-    return 'Créditos inválidos';
-  } else if (creditos >= 12) {
-    return 'Matriculado';
-  }
-  return 'Pendiente';
-}
-
-const estudiantes: Estudiante[] = [
-  { nombre: 'María Torres', creditos: 18 },
-  { nombre: 'Luis Pérez', creditos: 8},
-  { nombre: 'Ana Ruiz', creditos: 14 },
-  { nombre: 'Carlos Mendoza', creditos: 0}
-];
-
-// Componente funcional: devuelve la interfaz escrita en TSX.
-function Lista() {
-  return (
-    <div className="contenedor">
-      <h1>Mini-LMS · Lista de estudiantes</h1>
-      <table className="tabla">
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Créditos</th>
-            <th>Estado</th>
-            <th>Creditos validos</th>
-          </tr>
-        </thead>
-        <tbody>
-          {/* .map() genera una fila por estudiante */}
-          {estudiantes.map((e, i) => (
-            <tr key={i}>
-              <td>{e.nombre}</td>
-              <td>{e.creditos}</td>
-              <td>
-                <span
-                  className={
-                    estado(e.creditos) === 'Matriculado'
-                      ? 'badge ok'
-                      : 'badge pend'
-                  }
-                >
-                  {estado(e.creditos)}
-                </span>
-              </td>
-              <td>
-                {estado(e.creditos) === 'Matriculado'
-                  ? 'Valido'
-                  : estado(e.creditos) === 'Pendiente'
-                  ? 'Por confirmar'
-                  : 'No valido'}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
 export default App;
