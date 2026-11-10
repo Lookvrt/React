@@ -1,6 +1,6 @@
 # ⚛️ React + TypeScript (Vite)
 
-Aplicación interactiva en React con TypeScript desarrollada como un contador dinámico. El proyecto implementa manejo de estado local con `useState`, efectos secundarios con `useEffect` para la actualización síncrona del título del documento y renderizado de componentes funcionales optimizados con TypeScript.
+Aplicación en React con TypeScript desarrollada como un sistema de gestión simplificado. El proyecto implementa gestión de estado compartida y local con `useState`, efectos secundarios con `useEffect` para actualizar dinámicamente el título del navegador, formularios controlados con validaciones de campos y créditos, y renderizado dinámico de tablas con distintivos de estado (*badges*).
 
 ---
 
@@ -13,15 +13,15 @@ Aplicación interactiva en React con TypeScript desarrollada como un contador di
 │   │   ├── hero.png                        # Imagen representativa del proyecto
 │   │   ├── react.svg                       # Logo SVG de React
 │   │   └── vite.svg                        # Logo SVG de Vite
-│   ├── App.css                             # Estilos específicos del botón del contador y animaciones hover
-│   ├── App.tsx                             # Componente principal `Contador` (lógica de estado y efecto)
-│   ├── index.css                           # Estilos globales, tipografía y variables de temas (Dark/Light mode)
+│   ├── App.css                             # Estilos del formulario en línea, tabla y distintivos de estado (badges)
+│   ├── App.tsx                             # Componente principal Mini-LMS (interfaz Estudiante, lógica y renderizado)
+│   ├── index.css                           # Estilos globales, tipografía y diseño del contenedor principal
 │   └── main.tsx                            # Punto de entrada principal con `StrictMode` y renderizado de React
-├── index.html                              # Plantilla HTML principal de la aplicación
-├── package.json                            # Scripts del proyecto y dependencias
-├── tsconfig.json                           # Configuración de compilación de TypeScript
-├── vite.config.ts                          # Configuración de empaquetado e integración de Vite
-└── README.md                               # Documentación oficial del proyecto
+├── index.html                              # Plantilla HTML principal
+├── package.json                            # Dependencias y scripts del proyecto
+├── tsconfig.json                           # Configuración de TypeScript
+├── vite.config.ts                          # Configuración del empaquetador Vite
+└── README.md                               # Documentación del proyecto
 ```
 
 ---
@@ -59,10 +59,10 @@ Para generar los archivos optimizados y listos para desplegar en un entorno de p
 npm run build
 ```
 
-*Este comando invoca al compilador de TypeScript (tsc) para verificar que no existan errores de tipos y luego utiliza Vite para empaquetar y minificar el código en la carpeta `dist/`.*
+*Este comando invoca al compilador de TypeScript (tsc) para verificar que no existan errores de tipos y luego utiliza Vite para empaquetar y minificar el código en la carpeta dist/.*
 
 ### 5. Vista Previa de la Compilación (Opcional)
-Si deseas probar localmente la versión de producción que se acaba de generar en la carpeta `dist/`, ejecuta:
+Si deseas probar localmente la versión de producción que se acaba de generar en la carpeta dist/, ejecuta:
 ```bash
 npm run preview
 ```

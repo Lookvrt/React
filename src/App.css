@@ -1,16 +1,58 @@
-.btn{
-  width: 250px;
-  font-size: 1.5rem;
-  margin: 1rem auto;
-  background-color: #81d5f7;
-  color: black;
-  border: none;
-  border-radius: 0.2rem;
-  transition: transform 0.3s ease-in-out;
+.form-inline{
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.btn:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-  border: 0.15rem #ee58ee solid;
+.form-inline input{
+  background-color: #d8d8d871;
+  border: 0.1rem #00000044 solid;
+  border-radius: 0.2rem;
+  height: 20px;
+}
+.boton{
+  border: none;
+  background-color: #0e46be;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.tabla {
+  margin: 0 auto; 
+  margin-top: 2rem;
+  border-radius: 8px; 
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.tabla th,
+.tabla td {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.tabla tr:hover {
+  background-color: #f9f9f9;
+}
+
+.badge.ok{
+  background-color: #018601;
+  color: white;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.badgepend{
+  background-color: #ffff00;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
 }
