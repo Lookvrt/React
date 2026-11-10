@@ -1,19 +1,16 @@
-.navbar{
-  display: flex;
-  place-items: center;
-  justify-content: space-around;
-  background-color: black;
-  color: white;
-  height: 50px;
+.btn{
+  width: 250px;
+  font-size: 1.5rem;
+  margin: 1rem auto;
+  background-color: #81d5f7;
+  color: black;
+  border: none;
+  border-radius: 0.2rem;
+  transition: transform 0.3s ease-in-out;
 }
 
-.nav-btn{ 
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  color: white;
-  transition: color 0.2s ease-in-out;
-}
-
-.nav-btn:hover{
-  color: red;
+.btn:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  border: 0.15rem #ee58ee solid;
 }
