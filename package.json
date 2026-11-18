@@ -1,5 +1,5 @@
 {
-  "name": "catalogo-ecommerce",
+  "name": "galeria-perros-react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "alova": "^3.5.5",
     "axios": "^1.21.1",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
